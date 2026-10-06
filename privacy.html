@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spam-Killer 개인정보처리방침</title>
+</head>
+<body>
+  <h1>개인정보처리방침</h1>
+  <p>Spam-Killer는 운영자 개인 Gmail 계정의 특정 메시지를 정리하는 도구입니다.</p>
+
+  <h2>접근하는 정보와 사용 목적</h2>
+  <p>계정 소유자의 OAuth 동의를 받아 Gmail 메시지 ID와 수신자(To) 헤더를
+     조회합니다. 스팸함과 휴지통을 포함하여 검색하고, To 헤더가 단 하나이며
+     그 값이 정확히 me@aol.com인 메시지만 영구 삭제합니다.</p>
+  <p>영구 삭제 API 사용에 필요한 전체 Gmail 권한을 요청하지만,
+     자동 정리 기능은 메시지 본문이나 첨부파일을 수집하거나 저장하지 않습니다.</p>
+
+  <h2>저장 및 보호</h2>
+  <p>OAuth 인증정보는 Google Cloud Secret Manager에 저장합니다.
+     실행 로그에는 메시지 ID, 처리 건수 및 실행 상태가 기록될 수 있으며,
+     Google Cloud의 로그 보존 설정에 따라 보관됩니다.</p>
+
+  <h2>공유 및 이용 제한</h2>
+  <p>앱 실행과 저장에 Google Cloud를 사용합니다.
+     Gmail 데이터를 판매하거나 광고, 사용자 프로파일링,
+     AI 모델 학습에 사용하지 않습니다.</p>
+  <p>Google API에서 받은 정보의 사용은
+     <a href="https://developers.google.com/terms/api-services-user-data-policy">
+       Google API Services User Data Policy
+     </a>의 Limited Use 요구사항을 준수합니다.</p>
+
+  <h2>접근 철회 및 삭제</h2>
+  <p>Google 계정의 연결된 앱 설정에서 접근 권한을 철회할 수 있습니다.
+     운영자는 예약 작업을 중지하고 Secret Manager의 인증정보와
+     보관된 실행 로그를 삭제할 수 있습니다.
+     이미 영구 삭제된 Gmail 메시지는 복구할 수 없습니다.</p>
+
+  <h2>문의</h2>
+  <p><a href="mailto:dofasonth@gmail.com">dofasonth@gmail.com</a></p>
+  <p><a href="index.html">홈으로</a></p>
+</body>
+</html>
